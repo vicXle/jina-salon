@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --dark-pink: #f4a4b9;
+    --black: #1e1e24;
+    --med-pink: #f0b9c6;
+    --light-pink: #eed3da;
+    --yellow: #ffdc5e;
+    --white: #FFFFFF;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #f4a4b9, #f3adbf, #f2b6c6, #f1becc, #f0c7d2, #f6c8d0, #fbc9cd, #ffcbca, #ffc8b5, #ffc999, #ffd07a, #ffdc5e);
+    background-size: 150% 250%;
+}
+
+h1 {
+    font-family: 'Abril Fatface', serif;
+    height: 20vh;
+    color: var(--white);
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: flex-end;
+    justify-self: flex-start;
+    height: 30vh;
+}
+
+a {
+    text-decoration: none;
+    padding: 20px;
+    color: var(--white);
+    font-size: 6vw;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+footer {
+    bottom: 0;
+    color: var(--white);
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer p {
+    font-size: small;
+}
+
+main {
+    height: 80vh;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    h1 {
+        font-size: 4vw;
+    }
+    a {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    h1 {
+        font-size: 3vw;
+    }
+    a {
+        font-size: 3vw;
+    }
+}
