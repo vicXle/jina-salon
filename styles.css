@@ -1,0 +1,206 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* //////////////////////////////////// */
+
+/* start code */
+/* universal code */
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --dark-pink: #f4a4b9;
+    --black: #1e1e24;
+    --med-pink: #f0b9c6;
+    --light-pink: #eed3da;
+    --yellow: #ffdc5e;
+    --white: #FFFFFF;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.skipLink {
+    position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+    text-decoration: none;
+    color: var(--dark-pink);
+}
+.skipLink:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.hide {
+    position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* /////////////////////////////////////// */
+/* header */
+
+header {
+    width: 100%;
+}
+#home {
+    width: 20vw;
+    transition: fill 1s;
+    position: fixed;
+    float: left;
+}
+nav {
+    position: fixed;
+    right: 5vw;
+    top: 5vh;
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 10px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+#langList {
+    justify-content: center;
+    gap: 20px;
+    border-radius: 100px;
+    align-items: center;
+}
+
+#langList a {
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+    transition: color 1s;
+}
+
+a:hover {
+    color: var(--dark-pink);
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.prefEng {
+    background-color: var(--dark-pink);
+    border-radius: 100px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.prefEng:hover {
+    background-color: transparent;
+    color: var(--dark-pink);
+    text-decoration: none;
+    border: solid var(--dark-pink) 1px;
+    border-radius: 100px;
+}
+
+.prefKOR:hover{
+    color: var(--dark-pink);
+    text-decoration: none;
+    border: solid var(--dark-pink) 1px;
+    border-radius: 100px;
+}
+
+#home:hover {
+    fill: var(--dark-pink);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+nav p {
+    flex-grow: 1;
+}
+
+a[href="tel:+1(623)300-8798"]{
+    color: var(--dark-pink);
+}
+
+/* ////////////////////////////////// */
+/* main */
+
+.images {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
+}
+
+.images::-webkit-scrollbar {
+    width: 0;
+}
+
+.images img {
+    width: 200vw;
+}

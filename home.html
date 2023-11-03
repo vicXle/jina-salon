@@ -17,27 +17,29 @@
 
     <!-- <link rel="canonical" href="/">
     <base href="jinasalon/home"> -->
-    
+    <link rel="stylesheet" href="styles.css">
     <title>Jina Salon | Home</title>
 </head>
 <body>
     <a class="skipLink" href="#main">Skip to Main Content</a>
     <header>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
-            <style type="text/css">
-	            .st0{font-family:'AbrilFatface-Regular';}
-	            .st1{font-size:133.5173px;}
-	            .st2{font-size:64.8806px;}
-            </style>
-            <g>
-	        <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
-	        <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
-            </g>
-        </svg>
+        <a id="home" href="home.html">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{font-family:'AbrilFatface-Regular';}
+                    .st1{font-size:133.5173px;}
+                    .st2{font-size:64.8806px;}
+                </style>
+                <g>
+                <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
+                <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
+                </g>
+            </svg>
+        </a>
         
         <h1 class="hide">Jina Salon</h1><!--hide-->
         <nav>
-            <ul>
+            <ul id="menu">
                 <li>
                     <a href="#about">about</a>
                 </li>
@@ -52,8 +54,10 @@
                 </li>
             </ul>
 
-            <a href="home.html" class="prefLang">English</a>
-            <a href="homeKOR.html" class="prefLang">한국어</a>
+            <ul id="langList">
+                <li><a href="home.html" class="prefEng">English</a></li>
+                <li><a href="homeKOR.html" class="prefKOR">한국어</a></li>
+            </ul>
 
             <p>
                 call to book an appointment <a href="tel:+1(623)300-8798">623.300.8798</a>
@@ -62,7 +66,13 @@
     </header>
     <main id="main">
         <!--add salon intro images-->
-        <img>
+        <section class="images">
+            <h2 class="hide">images</h2>
+            <img src="images/inside 1.jpeg" alt="Inside pf Jina Salon with pink, modern interior">
+            <img src="images/inside 2.jpeg" alt="Inside pf Jina Salon with pink, modern interior, and a single salon chair in foreground">
+            <img src="images/inside 3.jpeg" alt="Another view of inside pf Jina Salon with pink, modern interior">
+        </section>
+        
 
         <section id="about">
                 <h2 class="hide">about</h2><!--hide-->
