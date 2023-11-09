@@ -106,12 +106,16 @@ h2 {
 header {
     width: 100%;
 }
+
 #home {
     width: 20vw;
     transition: fill 1s;
     position: fixed;
     float: left;
+    z-index: 5;
+    padding: 10px;
 }
+
 nav {
     position: fixed;
     right: 5vw;
@@ -122,6 +126,7 @@ nav {
     align-items: flex-end;
     justify-content: flex-end;
     gap: 20px;
+    z-index: 5;
 }
 
 ul {
@@ -157,7 +162,7 @@ a:hover {
     border-bottom: 1px solid var(--dark-pink);
 }
 
-.prefEng {
+/* .prefEng {
     background-color: var(--dark-pink);
     border-radius: 100px;
     color: var(--white);
@@ -177,7 +182,7 @@ a:hover {
     text-decoration: none;
     border: solid var(--dark-pink) 1px;
     border-radius: 100px;
-}
+} */
 
 #home:hover {
     fill: var(--dark-pink);
@@ -268,12 +273,12 @@ td:last-child{
     gap: 30px;
 }
 
-#moreServiceInfo a[href="services.html"] {
+#moreServiceInfo a[href="services.html"],  #moreServiceInfo a[href="servicesKOR.html"]{
     padding: 10px;
     width: 30%;
 }
 
-#moreServiceInfo a[href="services.html"]:hover {
+#moreServiceInfo a[href="services.html"]:hover, #moreServiceInfo a[href="servicesKOR.html"]:hover {
     border: solid 2px var(--dark-pink);
     border-radius: 100px;
 }
@@ -360,4 +365,69 @@ figure img:hover {
 
 figure a:hover {
     border: none;
+}
+
+/* ////////////////////////////////////// */
+/* contact section */
+
+#contact {
+    height: 100vh;
+    width: 85vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+}
+
+.instagram-media {
+    box-shadow:0 0 1px 0 var(--dark-pink),0 1px 10px 0 var(--dark-pink);
+    transition: all 1s;
+    transform: scale(.75, .75);
+}
+
+.instagram-media:hover {
+    box-shadow:0 0 1px 0 var(--yellow),0 1px 10px 0 var(--yellow);
+}
+
+#viewText {
+    color: var(--dark-pink);
+}
+
+.instagram-media svg g {
+    fill: var(--dark-pink);
+}
+
+#contactInfo {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#contactInfo table {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+}
+
+#contactInfo th, #contactInfo td {
+    text-align: left;
+}
+
+#contactInfo a[href="tel:+1(623)300-8798"] {
+    color: var(--black);
+}
+
+#contactInfo a[href="tel:+1(623)300-8798"]:hover {
+    color: var(--dark-pink);
+}
+
+/* ////////////////////////////////////// */
+/* footer styles */
+
+#backToTop {
+    font-size: 1rem;
+    color: var(--dark-pink);
+    position: relative;
+    right: -90vw;
 }
