@@ -68,9 +68,30 @@
         <!--add salon intro images-->
         <section class="images">
             <h2 class="hide">images</h2>
-            <img src="images/inside 1.jpeg" alt="Inside pf Jina Salon with pink, modern interior">
-            <img src="images/inside 2.jpeg" alt="Inside pf Jina Salon with pink, modern interior, and a single salon chair in foreground">
-            <img src="images/inside 3.jpeg" alt="Another view of inside pf Jina Salon with pink, modern interior">
+            <div id="img1">
+                <picture>
+                    <source media="(min-width: 720px)" src="images/inside 1 Desktop.jpg">
+                    <source media="(max-width: 768px)" src="images/inside 1 tablet.jpg">
+                    <source media="(max-width: 414px)" src="images/inside 1 mobile.jpg">
+                    <img src="images/inside 1.jpeg" alt="Inside pf Jina Salon with pink, modern interior">
+                </picture>
+            </div>
+            <div id="img2">
+                <picture>
+                    <source media="(min-width: 720px)" src="images/inside 2 Desktop.jpg">
+                    <source media="(max-width: 768px)" src="images/inside 2 tablet.jpg">
+                    <source media="(max-width: 414px)" src="images/inside 2 mobile.jpg">
+                    <img src="images/inside 2.jpeg" alt="Inside pf Jina Salon with pink, modern interior, and a single salon chair in foreground">
+                </picture>
+            </div>
+            <div id="img3">
+                <picture>
+                    <source media="(min-width: 720px)" src="images/inside 3 Desktop.jpg">
+                    <source media="(max-width: 768px)" src="images/inside 3 tablet.jpg">
+                    <source media="(max-width: 414px)" src="images/inside 3 mobile.jpg">
+                    <img src="images/inside 3.jpeg" alt="Another view of inside pf Jina Salon with pink, modern interior">
+                </picture>
+            </div>
         </section>
         
 
@@ -93,7 +114,7 @@
         <section id="services">
             <h2>common services</h2>
 
-            <section>
+            <section id="servicesMenu">
                 <h2 class="hide">Services menu</h2><!--hide-->
                 <!--Services list-->
                 <table>
@@ -126,22 +147,55 @@
                         <td>$65+</td>
                     </tr>
                 </table>
+                <section id="moreServiceInfo">
+                    <h2 class="hide">More information on services</h2>
+                    <a href="services.html">view more ></a>
+                    <p>
+                        **For detailed pricing and services, call <a href="tel:+1(623)300-8798">623.300.8798</a> to book a consultation.
+                    </p>
+                </section>
             </section>
-
-            <a href="services.html">view more ></a>
-            <p>
-                **For detailed pricing and services, call <a href="tel:+1(623)300-8798">623.300.8798</a> to book a consultation.
-            </p>
         </section>
 
         <section id="meetStylists">
             <h2>meet our stylists</h2>
             <!--insert stylists cards-->
-            <figure>
-                <img>
-                <figcaption>Stylist Name</figcaption>
-                <p>position</p>
-            </figure>
+            <section id="stylistCards">
+                <h2 class="hide">Stylists Cards</h2>
+                    <figure>
+                        <a class="cards">
+                            <img src="images/Stylist 2.jpg" alt="Jina has medium-length brown hair wearing a San Francisco white shirt, location is at a windy beach during the daytime">
+                        </a>
+                        
+                        <p class="name">Jina</p>
+                        <p>Lead Hair Specialist</p>
+                    </figure>
+                    <figure>
+                        <a class="cards">
+                            <img src="images/Stylist 1.jpg" alt="Rachel has curly brown hair, holding a denim jacket and wearing sunglasses, posing in front of a reflective window">
+                        </a>
+                        
+                        <p class="name">Rachel</p>
+                        <p>Color Specialist</p>
+                    </figure>
+                
+                    <figure>
+                        <a class="cards">
+                            <img src="images/Stylist 3.jpg" alt="Alex has short, slicked back, brown hair, wearing a black shirt and has lilac lighting">
+                        </a>
+                        
+                        <p class="name">Alex</p>
+                        <p>Perm Specialist</p>
+                    </figure>
+                    <figure>
+                        <a class="cards">
+                            <img src="images/Stylist 4.jpg" alt="Hannah has medium length blonde hair blowing in wind, and wearing an orange shirt with a denim jacket">
+                        </a>
+                        
+                        <p class="name">Hannah</p>
+                        <p>Cut and Style Specialist</p>
+                    </figure>
+            </section>
         </section>
 
         <section id="contact">

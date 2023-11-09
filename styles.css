@@ -62,6 +62,7 @@ table {
     --light-pink: #eed3da;
     --yellow: #ffdc5e;
     --white: #FFFFFF;
+    --title-font : 'Abril Fatface', serif;
 }
 
 body {
@@ -91,6 +92,12 @@ body {
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
+}
+
+h2 {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    margin: 30px 0 15px 0;
 }
 
 /* /////////////////////////////////////// */
@@ -141,12 +148,13 @@ a {
     text-decoration: none;
     color: var(--black);
     transition: color 1s;
+    font-size: 1.2rem;
 }
 
 a:hover {
     color: var(--dark-pink);
     font-weight: bold;
-    text-decoration: line-through;
+    border-bottom: 1px solid var(--dark-pink);
 }
 
 .prefEng {
@@ -174,7 +182,7 @@ a:hover {
 #home:hover {
     fill: var(--dark-pink);
     font-weight: normal;
-    text-decoration: none;
+    border: none;
 }
 
 nav p {
@@ -185,8 +193,17 @@ a[href="tel:+1(623)300-8798"]{
     color: var(--dark-pink);
 }
 
+p {
+    font-size: 1.2rem;
+}
+
 /* ////////////////////////////////// */
 /* main */
+
+.images img {
+    width: 100vw;
+    height: 100vh;
+}
 
 .images {
     display: flex;
@@ -201,6 +218,146 @@ a[href="tel:+1(623)300-8798"]{
     width: 0;
 }
 
-.images img {
-    width: 200vw;
+/* ////////////////////////////////////// */
+/* about section */
+
+#about {
+    height: 100vh;
+    width: 80vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* ////////////////////////////////////// */
+/* services section */
+
+#services {
+    height: 100vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+#servicesMenu {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+table {
+    width: 30%;
+    font-size: 1.5rem;
+}
+td {
+    padding: 15px;
+}
+
+td:last-child{
+    text-align: right;
+}
+
+#moreServiceInfo {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#moreServiceInfo a[href="services.html"] {
+    padding: 10px;
+    width: 30%;
+}
+
+#moreServiceInfo a[href="services.html"]:hover {
+    border: solid 2px var(--dark-pink);
+    border-radius: 100px;
+}
+
+/* ////////////////////////////////////// */
+/* stylists section */
+
+#meetStylists {
+    height: 100vh;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+}
+
+#stylistCards {
+    display: flex;
+}
+
+#stylistCards::-webkit-scrollbar {
+    width: 0;
+}
+
+figure {
+    position: relative;
+    transition: all 1s;
+}
+figure:nth-child(2){
+    left: 200px;
+    z-index: 4;
+}
+
+figure:nth-child(3) {
+    bottom: -20px;
+    z-index: 3;
+}
+
+figure:nth-child(4) {
+    left: -200px;
+    bottom: -40px;
+    z-index: 2;
+}
+
+figure:nth-child(5) {
+    left: -400px;
+    bottom: -60px;
+    z-index: 1;
+}
+
+figure:hover {
+    transform: scale(1.2, 1.2);
+    z-index: 5;
+}
+
+figure img{
+    width: 20vw;
+    border-radius: 50px;
+}
+
+.name {
+    font-weight: 900;
+    font-size: 2.3rem;
+    position: absolute;
+    bottom: 90px;
+    left: 30px;
+    color: var(--white);
+}
+
+figure p:last-child {
+    font-style: italic;
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: var(--white);
+}
+
+figure img {
+    transition: all 1s;
+}
+
+figure img:hover {
+    filter: brightness(50%);
+    font-weight: auto;
+}
+
+figure a:hover {
+    border: none;
 }

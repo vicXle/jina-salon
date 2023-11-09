@@ -43,7 +43,7 @@ a {
 }
 
 a:hover {
-    text-decoration: line-through;
+    border-bottom: 2px solid var(--white);
 }
 
 footer {
