@@ -67,6 +67,7 @@ table {
 
 body {
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .skipLink {
@@ -104,27 +105,39 @@ h2 {
 /* header */
 
 header {
-    width: 100%;
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    background-image: linear-gradient(var(--white), rgba(255, 255, 255, 0));
+    display: flex;
+    justify-content: space-between;
+    z-index: 6;
 }
 
 #home {
     width: 20vw;
     transition: fill 1s;
-    position: fixed;
     float: left;
     z-index: 5;
     padding: 10px;
 }
 
+button {
+    border: none;
+    background: none;
+    display: none;
+}
+
 nav {
-    position: fixed;
     right: 5vw;
     top: 5vh;
     width: 50vw;
+    height: 16vh;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    justify-content: flex-end;
+    align-content: center;
+    margin-top: 30px;
     gap: 20px;
     z-index: 5;
 }
@@ -292,6 +305,7 @@ td:last-child{
 
 #meetStylists {
     height: 100vh;
+    width: 90vw;
     margin-left: 5vw;
     display: flex;
     align-items: center;
@@ -310,23 +324,24 @@ figure {
     transition: all 1s;
 }
 figure:nth-child(2){
-    left: 200px;
+    left: 10vw;
     z-index: 4;
 }
 
 figure:nth-child(3) {
+    left: 5vw;
     bottom: -20px;
     z-index: 3;
 }
 
 figure:nth-child(4) {
-    left: -200px;
+    left: -3vw;
     bottom: -40px;
     z-index: 2;
 }
 
 figure:nth-child(5) {
-    left: -400px;
+    left: -6vw;
     bottom: -60px;
     z-index: 1;
 }
@@ -432,9 +447,228 @@ figure a:hover {
     font-size: 1rem;
     color: var(--dark-pink);
     position: relative;
-    right: -90vw;
+    right: -85vw;
 }
 
 footer {
     background-color: var(--med-pink);
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    text-align: center;
+    padding: 60px 0 30px 0;
+}
+
+footer a:hover {
+    border: none;
+}
+
+footer a svg:hover {
+    transition: all 1s;
+    fill: var(--yellow);
+}
+
+footer a[href="https://www.facebook.com/people/Jina-Salon/61550702547102/"] svg path:nth-child(2):hover {
+    transition: all 1s;
+    fill: var(--yellow);
+}
+
+footer p {
+    color: var(--white)
+}
+
+footer p:first-of-type {
+    font-weight: bold;
+}
+
+#footerLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ////////////////////////////////////////////////////// */
+/*                  RESPONSIVE SCREENS                    */
+
+@media screen and (min-width:970px) {
+    #home {
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width:970px){
+
+    #home {
+        width: 20vw;
+    }
+
+    nav {
+        position: fixed;
+        width: 80vw;
+        background-color: rgba(255, 255, 255, 0.551);
+        padding: 40px;
+        filter: drop-shadow(0 0 0.75rem var(--dark-pink));
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    button {
+        display: flex;
+        margin: 30px;
+    }
+
+    button svg:hover {
+        transition: all 1s;
+        fill: var(--dark-pink);
+    }
+
+    figure img{
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width:783px){
+    header {
+        height: 30vh;
+    }
+
+    #about {
+        flex-flow: column;
+        width: 60vw;
+        margin: 20vh auto;
+    }
+
+    #about img {
+        width: 60vw;
+    }
+
+    #services {
+        width: 80vw;
+    }
+
+    #services h2 {
+        align-self: center;
+    }
+
+    #servicesMenu {
+        flex-flow: column;
+        row-gap: 40px;
+    }
+
+    #moreServiceInfo {
+        order: 1;
+        display: flex;
+        flex-flow: row;
+        width: 80vw;
+    }
+
+    #moreServiceInfo p {
+        order: 1;
+    }
+
+    #moreServiceInfo a {
+        order: 2;
+    }
+
+    #servicesMenu table {
+        order: 2;
+        width: 80vw;
+    }
+
+    #meetStylists {
+        flex-flow: column;
+        row-gap: 60px;
+        justify-content: center;
+    }
+
+    figure img{
+        width: 25vw;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (max-width:618px) {
+    .name {
+        font-size: 2rem;
+        left: 20px;
+        bottom: 70px;
+    }
+
+    figure p:last-child {
+        left: 20px;
+        bottom: 30px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #home {
+        width: 30vw;
+    }
+
+    #contact {
+        width: 100vw;
+        flex-flow: column;
+        margin: 0 auto;
+        justify-content: center;
+        height: 150vh;
+    }
+
+    #backToTop {
+        right: -80vw;
+    }
+}
+
+@media screen and (max-width:500px) {
+    figure img{
+        width: 40vw;
+        border-radius: 25px;
+        position: static;
+    }
+
+    figure:nth-child(2){
+        left: 40vw;
+        z-index: 4;
+    }
+    
+    figure:nth-child(3) {
+        left: 10vw;
+        bottom: -40px;
+        z-index: 3;
+    }
+    
+    figure:nth-child(4) {
+        left: -20vw;
+        bottom: -80px;
+        z-index: 2;
+    }
+    
+    figure:nth-child(5) {
+        left: -50vw;
+        bottom: -120px;
+        z-index: 1;
+    }
+
+    figure:hover {
+        transform: scale(1.2, 1.2);
+        z-index: 5;
+    }
+
+    #backToTop {
+        right: -75vw;
+    }
+
+    footer {
+        padding-bottom: 50px;
+    }
+
+    footer p {
+        width: 70vw;
+        margin: 0 auto;
+    }
 }

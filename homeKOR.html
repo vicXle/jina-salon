@@ -18,12 +18,21 @@
     <!-- <link rel="canonical" href="/">
     <base href="jinasalon/home"> -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'aut6haa',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
     <style>
         h2 {
-            font-family: 'Gasoek One', sans-serif;
+            font-family: source-han-serif-korean, serif;
+            font-style: normal;
+            font-weight: 900;
         }
 
         .prefKOR {
@@ -93,6 +102,11 @@
                 <a href="tel:+1(623)300-8798">623.300.8798로</a> 예약을 하려면 전화하세요.
             </p>
         </nav>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
     </header>
     <main id="main">
         <!--add salon intro images-->
@@ -100,25 +114,25 @@
             <h2 class="hide">images</h2>
             <div id="img1">
                 <picture>
-                    <source media="(min-width: 720px)" src="images/inside 1 Desktop.jpg">
-                    <source media="(max-width: 768px)" src="images/inside 1 tablet.jpg">
-                    <source media="(max-width: 414px)" src="images/inside 1 mobile.jpg">
+                    <source media="(min-width:970px)" src="images/inside 1 Desktop.jpg">
+                    <source media="(max-width: 783px)" src="images/inside 1 tablet.jpg">
+                    <source media="(max-width: 500px)" src="images/inside 1 mobile.jpg">
                     <img src="images/inside 1.jpeg" alt="Inside pf Jina Salon with pink, modern interior">
                 </picture>
             </div>
             <div id="img2">
                 <picture>
-                    <source media="(min-width: 720px)" src="images/inside 2 Desktop.jpg">
-                    <source media="(max-width: 768px)" src="images/inside 2 tablet.jpg">
-                    <source media="(max-width: 414px)" src="images/inside 2 mobile.jpg">
+                    <source media="(min-width:970px)" src="images/inside 2 Desktop.jpg">
+                    <source media="(max-width: 783px)" src="images/inside 2 tablet.jpg">
+                    <source media="(max-width: 500px)" src="images/inside 2 mobile.jpg">
                     <img src="images/inside 2.jpeg" alt="Inside pf Jina Salon with pink, modern interior, and a single salon chair in foreground">
                 </picture>
             </div>
             <div id="img3">
                 <picture>
-                    <source media="(min-width: 720px)" src="images/inside 3 Desktop.jpg">
-                    <source media="(max-width: 768px)" src="images/inside 3 tablet.jpg">
-                    <source media="(max-width: 414px)" src="images/inside 3 mobile.jpg">
+                    <source media="(min-width:970px)" src="images/inside 3 Desktop.jpg">
+                    <source media="(max-width: 783px)" src="images/inside 3 tablet.jpg">
+                    <source media="(max-width: 500px)" src="images/inside 3 mobile.jpg">
                     <img src="images/inside 3.jpeg" alt="Another view of inside pf Jina Salon with pink, modern interior">
                 </picture>
             </div>
@@ -254,18 +268,18 @@
     </main>
     <footer>
 
-        <section>
+        <section id="footerLinks">
             <h2 class="hide">Links</h2>
             <!--svg for facebook-->
             <a href="https://www.facebook.com/people/Jina-Salon/61550702547102/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="#F4A4B9" />
+                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="white" />
                 </svg>
             </a>
             <!--svg for instagram-->
             <a href="https://www.instagram.com/hairby_jina/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="#F4A4B9" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="55" height="55" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0b9c6" fill="white" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                     <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
@@ -274,7 +288,7 @@
             </a>
         </section>
         <p><b>Disclaimer</b></p>
-        <p><small>This is for educational purposes only and is not the official site for Jina Salon</small></p>
+        <p><small>This is for academic purposes only and is not the official site for Jina Salon</small></p>
         <p><small>저작권&copy; 2023</small></p>
     </footer>
 </body>
