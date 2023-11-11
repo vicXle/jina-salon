@@ -112,6 +112,7 @@ header {
     display: flex;
     justify-content: space-between;
     z-index: 6;
+    top: 0;
 }
 
 #home {
@@ -441,6 +442,23 @@ figure a:hover {
 }
 
 /* ////////////////////////////////////// */
+/* services page styles */
+
+#tables {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#tables table {
+    width: 20vw;
+}
+
+
+
+/* ////////////////////////////////////// */
 /* footer styles */
 
 #backToTop {
@@ -498,8 +516,7 @@ footer p:first-of-type {
     }
 }
 
-@media screen and (max-width:970px){
-
+@media screen and (max-width:980px){
     #home {
         width: 20vw;
     }
@@ -529,9 +546,20 @@ footer p:first-of-type {
     figure img{
         border-radius: 20px;
     }
+
+    #tables {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10vh;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    #tables table {
+        width: 40vw;
+    }
 }
 
-@media screen and (max-width:783px){
+@media screen and (max-width:820px){
     header {
         height: 30vh;
     }
@@ -617,6 +645,19 @@ footer p:first-of-type {
         margin: 0 auto;
         justify-content: center;
         height: 150vh;
+    }
+
+    #tables {
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 10vh;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        margin-left: 20vw;
+    }
+    #tables table {
+        width: 50vw;
     }
 
     #backToTop {

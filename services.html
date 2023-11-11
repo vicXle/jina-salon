@@ -17,27 +17,78 @@
 
     <!-- <link rel="canonical" href="/">
     <base href="jinasalon/services"> -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .prefEng {
+            background-color: var(--dark-pink);
+            border-radius: 100px;
+            color: var(--white);
+            font-weight: bold;
+        }
 
+        .prefEng:hover {
+            background-color: transparent;
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        .prefKOR:hover{
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        header ul:first-child a[href="services.html"] {
+            color: var(--dark-pink);
+            font-weight: bold;
+        }
+
+        header {
+            height: 20vh;
+        }
+
+        main p {
+            margin-top: 30vh;
+            margin-bottom: 10vh;
+            width: 60vw;
+            margin-left: 20vw;
+        }
+
+        th {
+            font-family: 'Abril Fatface', serif;
+            font-size: 2.5rem;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+        td {
+            font-size: 1.2rem;
+        }
+    </style>
     <title>Jina Salon | Services</title>
 </head>
 <body>
     <a class="skipLink" href="#main">Skip to Main Content</a>
     <header>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
-            <style type="text/css">
-	            .st0{font-family:'AbrilFatface-Regular';}
-	            .st1{font-size:133.5173px;}
-	            .st2{font-size:64.8806px;}
-            </style>
-            <g>
-	        <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
-	        <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
-            </g>
-        </svg>
+        <a id="home" href="home.html">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{font-family:'AbrilFatface-Regular';}
+                    .st1{font-size:133.5173px;}
+                    .st2{font-size:64.8806px;}
+                </style>
+                <g>
+                <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
+                <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
+                </g>
+            </svg>
+        </a>
         
         <h1 class="hide">Jina Salon</h1><!--hide-->
         <nav>
-            <ul>
+            <ul id="menu">
                 <li>
                     <a href="home.html#about">about</a>
                 </li>
@@ -52,24 +103,33 @@
                 </li>
             </ul>
 
-            <a href="services.html" class="prefLang">English</a>
-            <a href="servicesKOR.html" class="prefLang">한국어</a>
+            <ul id="langList">
+                <li><a href="services.html" class="prefEng">English</a></li>
+                <li><a href="servicesKOR.html" class="prefKOR">한국어</a></li>
+            </ul>
 
             <p>
                 call to book an appointment <a href="tel:+1(623)300-8798">623.300.8798</a>
             </p>
         </nav>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
     </header>
     <main id="main">
-        <header>
-            <h2>services</h2>
-        </header>
-        <section>
-            <h2 class="hide">Services menu</h2><!--hide-->
+        <p>
+            **For detailed pricing, call <a href="tel:+1(623)300-8798">623.300.8798</a> to book a consultation.
+        </p>
+
+            <section id="tables">
+            <h2 class="hide">services</h2>
+
             <table>
-                <tr>
-                    <th>Basic Services</th>
-                </tr>
+                <thead>
+                    <th colspan="2">Basic Services</th>
+                </thead>
                 <tr>
                     <td>Women's Haircut</td>
                     <td>$35+</td>
@@ -82,10 +142,11 @@
                     <td>Blowdry</td>
                     <td>$35+</td>
                 </tr>
-
-                <tr>
-                    <th>Color and Highlights</th>
-                </tr>
+            </table>
+            <table>
+                <thead>
+                    <th colspan="2">Color&Highlights</th>
+                </thead>
                 <tr>
                     <td>Basic Color</td>
                     <td>$90+</td>
@@ -118,10 +179,11 @@
                     <td>Toner</td>
                     <td>$60+</td>
                 </tr>
-
-                <tr>
-                    <th>Perms</th>
-                </tr>
+            </table>
+            <table>
+                <thead>
+                    <th colspan="2">Perms</th>
+                </thead>
                 <tr>
                     <td>Basic Perm</td>
                     <td>$90+</td>
@@ -142,10 +204,11 @@
                     <td>Volume Perm</td>
                     <td>$70+</td>
                 </tr>
-
-                <tr>
-                    <th>Treatments</th>
-                </tr>
+            </table>
+            <table>
+                <thead>
+                    <th colspan="2">Treatments</th>
+                </thead>
                 <tr>
                     <td>Hair Manicure</td>
                     <td>$80+</td>
@@ -167,28 +230,22 @@
                     <td>$40+</td>
                 </tr>
             </table>
-            <p><small>
-                **For detailed pricing, call <a href="tel:+1(623)300-8798">623.300.8798</a> to book a consultation.
-            </small></p>
         </section>
     </main>
     <a id="backToTop" href="#main">back to top^</a>
     <footer>
-        <!--Insert logo svg-->
-        <svg></svg>
-
-        <section>
+        <section id="footerLinks">
             <h2 class="hide">Links</h2>
             <!--svg for facebook-->
             <a href="https://www.facebook.com/people/Jina-Salon/61550702547102/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="#F4A4B9" />
+                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="white" />
                 </svg>
             </a>
             <!--svg for instagram-->
             <a href="https://www.instagram.com/hairby_jina/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="#F4A4B9" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="55" height="55" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0b9c6" fill="white" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                     <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
@@ -196,8 +253,8 @@
                 </svg>
             </a>
         </section>
-        <p><b>Disclaimer</b></p>
-        <p><small>This is for educational purposes only and is not the official site for Jina Salon</small></p>
+        <p>Disclaimer</p>
+        <p><small>This is for academic purposes only and is not the official site for Jina Salon</small></p>
         <p><small>Copyright&copy; 2023</small></p>
     </footer>
 </body>

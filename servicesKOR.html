@@ -17,23 +17,86 @@
 
     <!-- <link rel="canonical" href="/">
     <base href="jinasalon/services"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'aut6haa',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <style>
+        .prefKOR {
+            background-color: var(--dark-pink);
+            border-radius: 100px;
+            color: var(--white);
+            font-weight: bold;
+        }
 
+        .prefKOR:hover {
+            background-color: transparent;
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        .prefEng:hover{
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        header ul:first-child a[href="servicesKOR.html"] {
+            color: var(--dark-pink);
+            font-weight: bold;
+        }
+
+        header {
+            height: 20vh;
+        }
+
+        main p {
+            margin-top: 30vh;
+            margin-bottom: 10vh;
+            width: 60vw;
+            margin-left: 20vw;
+        }
+
+        th {
+            font-family: source-han-serif-korean, serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+        td {
+            font-size: 1.2rem;
+        }
+    </style>
     <title>Jina Salon | Services</title>
 </head>
 <body>
     <a class="skipLink" href="#main">본문 내용 건너뛰기</a>
     <header>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
-            <style type="text/css">
-	            .st0{font-family:'AbrilFatface-Regular';}
-	            .st1{font-size:133.5173px;}
-	            .st2{font-size:64.8806px;}
-            </style>
-            <g>
-	        <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
-	        <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
-            </g>
-        </svg>
+        <a id="home" href="homeKOR.html">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{font-family:'AbrilFatface-Regular';}
+                    .st1{font-size:133.5173px;}
+                    .st2{font-size:64.8806px;}
+                </style>
+                <g>
+                <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
+                <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
+                </g>
+            </svg>
+        </a>
         
         <h1 class="hide">Jina Salon</h1><!--hide-->
         <nav>
@@ -52,24 +115,32 @@
                 </li>
             </ul>
 
-            <a href="services.html" class="prefLang">English</a>
-            <a href="servicesKOR.html" class="prefLang">한국어</a>
+            <ul id="langList">
+                <li><a href="services.html" class="prefEng">English</a></li>
+                <li><a href="servicesKOR.html" class="prefKOR">한국어</a></li>
+            </ul>
 
             <p>
                 <a href="tel:+1(623)300-8798">623.300.8798로</a> 예약을 하려면 전화하세요.
             </p>
         </nav>
+
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
     </header>
     <main id="main">
-        <header>
-            <h2>미용 서비스</h2>
-        </header>
-        <section>
-            <h2 class="hide">Services menu</h2><!--hide-->
+        <p>
+            ** 자세한 가격 및 서비스 정보를 확인하시려면 <a href="tel:+1(623)300-8798">623.300.8798로</a> 상담 예약을 하세요.
+        </p>
+        <section id="tables">
+            <h2 class="hide">Services menu</h2>
             <table>
-                <tr>
-                    <th>미용실 기본 서비스</th>
-                </tr>
+                <thead>
+                    <th colspan="2">미용실 기본 서비스</th>
+                </thead>
                 <tr>
                     <td>여성 헤어컷</td>
                     <td>$35+</td>
@@ -82,10 +153,11 @@
                     <td>블로우 드라이</td>
                     <td>$35+</td>
                 </tr>
-
-                <tr>
-                    <th>컬러와 하이라이트</th>
-                </tr>
+            </table>
+            <table>
+                <thead>
+                    <th colspan="2">컬러와 하이라이트</th>
+                </thead>
                 <tr>
                     <td>기본 컬러 서비스</td>
                     <td>$90+</td>
@@ -118,10 +190,11 @@
                     <td>토너 블리치</td>
                     <td>$60+</td>
                 </tr>
-
-                <tr>
-                    <th>펌</th>
-                </tr>
+            </table>
+            <table>
+                <thead>
+                    <th colspan="2">펌</th>
+                </thead>
                 <tr>
                     <td>기본 펌 서비스</td>
                     <td>$90+</td>
@@ -142,10 +215,11 @@
                     <td>볼륨 펌</td>
                     <td>$70+</td>
                 </tr>
-
-                <tr>
-                    <th>헤어 트리트먼트</th>
-                </tr>
+            </table>
+            <table>
+                <thead>
+                    <th colspan="2">헤어 트리트먼트</th>
+                </thead>
                 <tr>
                     <td>헤어 매니큐어</td>
                     <td>$80+</td>
@@ -167,28 +241,22 @@
                     <td>$40+</td>
                 </tr>
             </table>
-            <p><small>
-                ** 자세한 가격 및 서비스 정보를 확인하시려면 <a href="tel:+1(623)300-8798">623.300.8798로</a> 상담 예약을 하세요.
-            </small></p>
         </section>
     </main>
     <a id="backToTop" href="#main">맨 위로 ^</a>
     <footer>
-        <!--Insert logo svg-->
-        <svg></svg>
-
-        <section>
+        <section id="footerLinks">
             <h2 class="hide">Links</h2>
             <!--svg for facebook-->
             <a href="https://www.facebook.com/people/Jina-Salon/61550702547102/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="#F4A4B9" />
+                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="white" />
                 </svg>
             </a>
             <!--svg for instagram-->
             <a href="https://www.instagram.com/hairby_jina/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="#F4A4B9" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="55" height="55" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0b9c6" fill="white" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                     <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
@@ -196,8 +264,8 @@
                 </svg>
             </a>
         </section>
-        <p><b>Disclaimer</b></p>
-        <p><small>This is for educational purposes only and is not the official site for Jina Salon</small></p>
+        <p><b>면책 조항</b></p>
+        <p><small>이것은 학술 목적으로만 사용되며 Jina Salon의 공식 사이트가 아닙니다.</small></p>
         <p><small>저작권&copy; 2023</small></p>
     </footer>
 </body>
