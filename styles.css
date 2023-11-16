@@ -65,6 +65,7 @@ table {
     --title-font : 'Abril Fatface', serif;
 }
 
+
 body {
     margin: 0 auto;
     overflow-x: hidden;
@@ -612,6 +613,11 @@ footer p:first-of-type {
     }
 
     button:hover + #nav, #nav:hover {
+        display: flex;
+        visibility: visible;
+    }
+
+    button:focus + #nav {
         display: flex;
         visibility: visible;
     }
