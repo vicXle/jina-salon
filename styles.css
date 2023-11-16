@@ -551,7 +551,7 @@ footer a[href="https://www.facebook.com/people/Jina-Salon/61550702547102/"] svg 
 }
 
 .instagram-media:hover #viewText, .instagram-media:hover svg g{
-    transition: all 1s;
+    transition: all 2s;
     fill: var(--yellow);
     color: var(--yellow);
 }

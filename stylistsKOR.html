@@ -17,23 +17,71 @@
 
     <!-- <link rel="canonical" href="/">
     <base href="jinasalon/stylists"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'aut6haa',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <style>
+        h2 {
+            font-family: source-han-serif-korean, serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+        
+        .prefKOR {
+            background-color: var(--dark-pink);
+            border-radius: 100px;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .prefKOR:hover {
+            background-color: transparent;
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        .prefEng:hover{
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        header ul:first-child a[href="stylistsKOR.html"] {
+            color: var(--dark-pink);
+            font-weight: bold;
+        }
+    </style>
 
     <title>Jina Salon | Stylists</title>
 </head>
 <body>
     <a class="skipLink" href="#main">본문 내용 건너뛰기</a>
     <header>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
-            <style type="text/css">
-	            .st0{font-family:'AbrilFatface-Regular';}
-	            .st1{font-size:133.5173px;}
-	            .st2{font-size:64.8806px;}
-            </style>
-            <g>
-	        <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
-	        <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
-            </g>
-        </svg>
+        <a id="home" href="homeKOR.html">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{font-family:'AbrilFatface-Regular';}
+                    .st1{font-size:133.5173px;}
+                    .st2{font-size:64.8806px;}
+                </style>
+                <g>
+                <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
+                <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
+                </g>
+            </svg>
+        </a>
         
         <h1 class="hide">Jina Salon</h1><!--hide-->
         <nav>
@@ -69,34 +117,91 @@
             </div>
         </nav>
     </header>
-    <main id="main">
-        <section id="meetStylists">
-            <h2>저희 스타일리스트를 만나보세요</h2>
-            <!--insert stylists cards-->
-            <figure>
-                <img>
-                <figcaption>Stylist Name</figcaption>
-                <p>position</p>
-            </figure>
+    <main id="main" class="stylistsPage">
+        <h2 id="stylistTitle">저희 재능 있는 팀</h2>
+        <section id="meetStylist1">
+            <div class="imgs">
+                <img src="images/Stylist 2.jpg" alt="Jina has medium-length brown hair wearing a San Francisco white shirt, location is at a windy beach during the daytime">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob1" clipPathUnits="objectBoundingBox" transform="scale(0.006100, 0.006231)">
+                    <path fill="#FF0066" d="M29.1,-37.8C40.9,-24.7,55.8,-18.6,64.8,-5.7C73.9,7.1,77.1,26.7,69.1,39.3C61.1,51.9,42.1,57.5,25,59.9C7.9,62.4,-7.1,61.6,-17.9,55.1C-28.6,48.5,-35.1,36.3,-42.6,24.2C-50,12,-58.5,0.1,-62,-16.3C-65.5,-32.7,-64,-53.5,-52.8,-66.7C-41.6,-79.8,-20.8,-85.3,-6.1,-78C8.6,-70.8,17.3,-50.8,29.1,-37.8Z" transform="translate(90 86)" />
+                </clipPath>
+                </svg>
+            </div>
+            
+            <section class="introStylist">
+                <h2>Jina</h2>
+                <p class="position">리드 헤어 스페셜리스트</p>
+                <p>우리의 미래를 개척하는 창시자, 지나를 만나보세요. 헤어 스타일링의 선도적인 비전을 제시하는 지나는 한국 뷰티 트렌드에 예민한 눈을 가지고 있습니다. 지나는 그녀의 열정을 고스란히 담아 자신의 미용실에서 한국 뷰티와 스타일을 선보였습니다. 미용 및 헤어 분야에서 25년의 경험을 쌓은 지나는 각각의 고객에게 독특하고 개인 맞춤형 경험을 제공하여 자연스러운 아름다움을 한층 더 끌어올립니다.</p>
+            </section>
         </section>
+
+        <section id="meetStylist2">
+            <div class="imgs">
+                <img src="images/Stylist 1.jpg" alt="Rachel has curly brown hair, holding a denim jacket and wearing sunglasses, posing in front of a reflective window">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob2" clipPathUnits="objectBoundingBox" transform="scale(0.005999, 0.005031)">
+                    <path fill="#FF0066" d="M44.5,-59.5C53.2,-45.7,52.7,-27.5,57.2,-9C61.8,9.4,71.3,28.1,68,44.4C64.7,60.7,48.5,74.8,30.3,79.9C12.2,85,-8,81.2,-24.7,72.9C-41.5,64.7,-54.8,52,-60.1,37.3C-65.5,22.7,-62.9,6,-56.8,-6.8C-50.7,-19.6,-41.2,-28.6,-31.1,-42.2C-21.1,-55.8,-10.5,-74,3.7,-78.3C17.9,-82.7,35.8,-73.3,44.5,-59.5Z" transform="translate(80 80)" />
+                </clipPath>
+                </svg>
+            </div>
+            
+            <section class="introStylist">
+                <h2>Rachel</h2>
+                <p class="position">헤어 컬러 전문가</p>
+                <p>레이첼을 만나보세요. 우리의 뛰어난 색채 마에스트로인 레이첼은 헤어 컬러링을 재정의하기 위한 여정에 나서 있습니다. 헌신적인 전문가로서 레이첼은 예술적 감각을 기술적 숙련과 결합하여 당신만의 스타일을 반영하는 맞춤형 컬러 팔레트를 만들어냅니다. 지나 살롱에서는 당신의 헤어가 당신만큼이나 생기 넘치게 빛나야 한다고 믿습니다. 레이첼의 전문성은 보통의 머리카락을 특별한 걸작으로 바꿔놓습니다. 레이첼과의 예약으로 여러분만의 인상을 남기는 새로운 모습을 만들어보세요.</p>
+            </section>    
+        </section>
+
+        <section id="meetStylist3">
+            <div class="imgs">
+                <img src="images/Stylist 3.jpg" alt="Alex has short, slicked back, brown hair, wearing a black shirt and has lilac lighting">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob3" clipPathUnits="objectBoundingBox" transform="scale(0.006100, 0.006231)">
+                    <path fill="#FF0066" d="M50.5,-64C61.4,-50.9,63.7,-31.3,67.8,-11.4C72,8.5,78.1,28.5,70.5,39.9C62.9,51.2,41.7,53.8,22.8,59.2C3.8,64.6,-12.8,72.9,-28.2,70.3C-43.5,67.8,-57.5,54.5,-58.8,39.9C-60.2,25.3,-48.9,9.3,-47.4,-10C-45.9,-29.3,-54.3,-51.9,-48,-65.8C-41.7,-79.7,-20.9,-84.9,-0.6,-84.2C19.7,-83.5,39.5,-77,50.5,-64Z" transform="translate(80 85)" />
+                </clipPath>
+                </svg>
+            </div>
+            
+            <section class="introStylist">
+                <h2>Alex</h2>
+                <p class="position">헤어 펌 전문가</p>
+                <p>알렉스를 만나보세요. 저희의 펌의 대가이자 환상적인 곱슬머리의 주역, 알렉스입니다. 정밀함에 대한 열정과 개성을 발견하는 눈을 지녔으며, 알렉스는 보통 머릿결을 아름다운 파도로 만들어냅니다. 지나 살롱에서는 개인의 자연스러운 헤어 리듬을 받아들이며 맞춤형이자 영구적인 펌 스타일을 만들어냅니다. 부드러운 곱슬이든 대담한 파도든, 알렉스와의 예약으로 여러분의 머릿결이 펌 전문가의 손에서 기쁨을 춤추게 해보세요!</p>
+            </section>
+        </section>
+
+        <section id="meetStylist4">
+            <div class="imgs">
+                <img src="images/Stylist 4.jpg" alt="Hannah has medium length blonde hair blowing in wind, and wearing an orange shirt with a denim jacket">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob4" clipPathUnits="objectBoundingBox" transform="scale(0.006100, 0.006231)">
+                    <path fill="#FF0066" d="M50.5,-56.4C62.3,-50.3,66.4,-31.4,71,-11.6C75.6,8.2,80.6,28.8,71.9,39.3C63.2,49.8,40.8,50.1,21,57.2C1.1,64.2,-16.1,77.9,-27.1,74C-38.1,70.2,-42.8,48.8,-46,32C-49.2,15.2,-50.8,3,-51.6,-11.9C-52.3,-26.9,-52.2,-44.5,-43.5,-51.1C-34.7,-57.7,-17.4,-53.2,1,-54.4C19.4,-55.6,38.7,-62.4,50.5,-56.4Z" transform="translate(70 60)" />
+                </clipPath>
+                </svg>
+            </div>
+        
+            <section class="introStylist">
+                <h2>Hannah</h2>
+                <p class="position">헤어 컷 앤 스타일 전문가</p>
+                <p>한나를 만나보세요. 우리의 최신 유행을 선도하는 스타일리스트, 한나입니다. 최신 트렌드를 파악하는 눈과 개인의 우아함을 표현하는 능력을 갖춘 한나는 당신만의 특별한 헤어컷을 만들어냅니다. 저희는 멋진 헤어컷이 자신감을 높이고 최고의 특성을 드러내는 데에 힘이 있다고 믿습니다. 한나는 현대적인 감각과 시대를 초월한 세련미를 완벽하게 조화시킨 스타일을 만들어내어 여러분이 손쉽게 세련되게 떠날 수 있도록 합니다. 한나와의 예약으로 여러분의 헤어가 말을 할 수 있도록 해보세요.</p>
+            </section>
+        </section>
+
         <a id="backToTop" href="#main">맨 위로 ^</a>
     </main>
     <footer>
-        <!--Insert logo svg-->
-        <svg></svg>
-
-        <section>
+        <section id="footerLinks">
             <h2 class="hide">Links</h2>
             <!--svg for facebook-->
             <a href="https://www.facebook.com/people/Jina-Salon/61550702547102/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="#F4A4B9" />
+                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="white" />
                 </svg>
             </a>
             <!--svg for instagram-->
             <a href="https://www.instagram.com/hairby_jina/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="#F4A4B9" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="55" height="55" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0b9c6" fill="white" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                     <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
@@ -104,8 +209,8 @@
                 </svg>
             </a>
         </section>
-        <p><b>Disclaimer</b></p>
-        <p><small>This is for educational purposes only and is not the official site for Jina Salon</small></p>
+        <p><b>면책 조항</b></p>
+        <p><small>이것은 학술 목적으로만 사용되며 Jina Salon의 공식 사이트가 아닙니다.</small></p>
         <p><small>저작권&copy; 2023</small></p>
     </footer>
 </body>
