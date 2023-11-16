@@ -101,12 +101,17 @@ h2 {
     margin: 30px 0 15px 0;
 }
 
+p::selection, a::selection, h2::selection, td::selection, th::selection {
+    color: var(--white);
+    background-color: var(--dark-pink);
+}
+
 /* /////////////////////////////////////// */
 /* header */
 
 header {
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
     position: fixed;
     background-image: linear-gradient(var(--white), rgba(255, 255, 255, 0));
     display: flex;
@@ -126,10 +131,11 @@ header {
 button {
     border: none;
     background: none;
+    visibility: hidden;
     display: none;
 }
 
-nav {
+#nav {
     right: 5vw;
     top: 5vh;
     width: 50vw;
@@ -381,6 +387,7 @@ figure img {
 figure img:hover {
     filter: brightness(50%);
     font-weight: auto;
+    cursor: pointer;
 }
 
 figure a:hover {
@@ -456,7 +463,56 @@ figure a:hover {
     width: 20vw;
 }
 
+/* ////////////////////////////////////// */
+/* stylists page styles */
 
+.stylistsPage {
+    margin-top: 30vh;
+}
+
+#stylistTitle {
+    margin-left: 150px;
+    margin-bottom: 15vh;
+}
+
+#meetStylist1, #meetStylist2, #meetStylist3, #meetStylist4 {
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    gap: 50px;
+}
+
+.stylistsPage img {
+    width:40vw;
+    height: auto;
+}
+
+#meetStylist1 img:first-of-type {
+    clip-path: url("#blob1");
+}
+
+#meetStylist2 img:first-of-type {
+    clip-path: url("#blob2");
+    
+}
+
+#meetStylist3 img:first-of-type {
+    clip-path: url("#blob3");
+}
+
+#meetStylist4 img:first-of-type {
+    clip-path: url("#blob4");
+}
+
+.introStylist {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+}
+
+.position {
+    font-style: italic;
+}
 
 /* ////////////////////////////////////// */
 /* footer styles */
@@ -487,9 +543,16 @@ footer a svg:hover {
     fill: var(--yellow);
 }
 
-footer a[href="https://www.facebook.com/people/Jina-Salon/61550702547102/"] svg path:nth-child(2):hover {
+footer a[href="https://www.facebook.com/people/Jina-Salon/61550702547102/"] svg path:nth-child(2):hover{
     transition: all 1s;
     fill: var(--yellow);
+    color: var(--yellow);
+}
+
+.instagram-media:hover #viewText, .instagram-media:hover svg g{
+    transition: all 1s;
+    fill: var(--yellow);
+    color: var(--yellow);
 }
 
 footer p {
@@ -521,26 +584,41 @@ footer p:first-of-type {
         width: 20vw;
     }
 
-    nav {
+    #nav{
         position: fixed;
         width: 80vw;
         background-color: rgba(255, 255, 255, 0.551);
         padding: 40px;
         filter: drop-shadow(0 0 0.75rem var(--dark-pink));
         flex-flow: column;
-        justify-content: center;
+        gap: 20px;
+        justify-items: center;
         align-items: center;
         display: none;
+        visibility: hidden;
     }
 
     button {
-        display: flex;
+        visibility: visible;
+        display: block;
         margin: 30px;
+        cursor: pointer;
+        z-index: 7;
     }
 
     button svg:hover {
         transition: all 1s;
         fill: var(--dark-pink);
+    }
+
+    button:hover + #nav, #nav:hover {
+        display: flex;
+        visibility: visible;
+    }
+
+    #moreServiceInfo a[href="services.html"],  #moreServiceInfo a[href="servicesKOR.html"]{
+        width: 50%;
+        text-align: center;
     }
 
     figure img{
@@ -556,6 +634,14 @@ footer p:first-of-type {
     }
     #tables table {
         width: 40vw;
+    }
+
+    #meetStylist1, #meetStylist2, #meetStylist3, #meetStylist4 {
+        width: 90vw;
+    }
+
+    .stylistsPage img {
+        width: 50vw;
     }
 }
 
@@ -617,6 +703,11 @@ footer p:first-of-type {
         width: 25vw;
         border-radius: 25px;
     }
+
+    #stylistTitle {
+        text-align: center;
+        margin-left: auto;
+    }
 }
 
 @media screen and (max-width:618px) {
@@ -633,6 +724,11 @@ footer p:first-of-type {
 
     p {
         font-size: 1rem;
+    }
+
+    #moreServiceInfo a[href="services.html"],  #moreServiceInfo a[href="servicesKOR.html"]{
+        width: 70%;
+        text-align: center;
     }
 
     #home {
@@ -662,6 +758,30 @@ footer p:first-of-type {
 
     #backToTop {
         right: -80vw;
+    }
+
+    #meetStylist1, #meetStylist2, #meetStylist3, #meetStylist4 {
+        display: block;
+        flex-flow: column;
+        margin: 0 auto;
+    }
+
+    .stylistsPage .imgs {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .introStylist {
+        position: relative;
+        text-align: right;
+        margin: 0 auto;
+        width: 60vw;
+    }
+
+    .introStylist p:last-child {
+        text-align: left;
+        margin-bottom: 80px;
+        padding: 40px 0 0 40px;
     }
 }
 

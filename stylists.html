@@ -17,77 +17,177 @@
 
     <!-- <link rel="canonical" href="/">
     <base href="jinasalon/stylists"> -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .prefEng {
+            background-color: var(--dark-pink);
+            border-radius: 100px;
+            color: var(--white);
+            font-weight: bold;
+        }
 
+        .prefEng:hover {
+            background-color: transparent;
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        .prefKOR:hover{
+            color: var(--dark-pink);
+            text-decoration: none;
+            border: solid var(--dark-pink) 1px;
+            border-radius: 100px;
+        }
+
+        header ul:first-child a[href="stylists.html"] {
+            color: var(--dark-pink);
+            font-weight: bold;
+        }
+
+        header {
+            height: 20vh;
+        }
+    </style>
     <title>Jina Salon | Stylists</title>
 </head>
 <body>
     <a class="skipLink" href="#main">Skip to Main Content</a>
     <header>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
-            <style type="text/css">
-	            .st0{font-family:'AbrilFatface-Regular';}
-	            .st1{font-size:133.5173px;}
-	            .st2{font-size:64.8806px;}
-            </style>
-            <g>
-	        <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
-	        <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
-            </g>
-        </svg>
+        <a id="home" href="home.html">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 330.8 231.04" style="enable-background:new 0 0 330.8 231.04;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{font-family:'AbrilFatface-Regular';}
+                    .st1{font-size:133.5173px;}
+                    .st2{font-size:64.8806px;}
+                </style>
+                <g>
+                <text transform="matrix(1 0 0 1 38.0282 131.4867)" class="st0 st1">jina.</text>
+                <text transform="matrix(1 0 0 1 82.7274 194.1625)" class="st0 st2">SALON</text>
+                </g>
+            </svg>
+        </a>
         
         <h1 class="hide">Jina Salon</h1><!--hide-->
         <nav>
-            <ul>
-                <li>
-                    <a href="home.html#about">about</a>
-                </li>
-                <li>
-                    <a href="services.html">services</a>
-                </li>
-                <li>
-                    <a href="#">stylists</a>
-                </li>
-                <li>
-                    <a href="home.html#contact">contact</a>
-                </li>
-            </ul>
-
-            <a href="stylists.html" class="prefLang">English</a>
-            <a href="stylistsKOR.html" class="prefLang">한국어</a>
-
-            <p>
-                call to book an appointment <a href="tel:+1(623)300-8798">623.300.8798</a>
-            </p>
+            <button id="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div id="nav">
+                <ul id="menu">
+                    <li>
+                        <a href="home.html#about">about</a>
+                    </li>
+                    <li>
+                        <a href="services.html">services</a>
+                    </li>
+                    <li>
+                        <a href="stylists.html">stylists</a>
+                    </li>
+                    <li>
+                        <a href="home.html#contact">contact</a>
+                    </li>
+                </ul>
+    
+                <ul id="langList">
+                    <li><a href="stylists.html" class="prefEng">English</a></li>
+                    <li><a href="stylistsKOR.html" class="prefKOR">한국어</a></li>
+                </ul>
+    
+                <p>
+                    call to book an appointment <a href="tel:+1(623)300-8798">623.300.8798</a>
+                </p>
+            </div>
         </nav>
     </header>
-    <main id="main">
-        <section id="meetStylists">
-            <h2>meet our stylists</h2>
-            <!--insert stylists cards-->
-            <figure>
-                <img>
-                <figcaption>Stylist Name</figcaption>
-                <p>position</p>
-            </figure>
+    <main id="main" class="stylistsPage">
+        <h2 id="stylistTitle">our talented team</h2>
+        <section id="meetStylist1">
+            <div class="imgs">
+                <img src="images/Stylist 2.jpg" alt="Jina has medium-length brown hair wearing a San Francisco white shirt, location is at a windy beach during the daytime">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob1" clipPathUnits="objectBoundingBox" transform="scale(0.006100, 0.006231)">
+                    <path fill="#FF0066" d="M29.1,-37.8C40.9,-24.7,55.8,-18.6,64.8,-5.7C73.9,7.1,77.1,26.7,69.1,39.3C61.1,51.9,42.1,57.5,25,59.9C7.9,62.4,-7.1,61.6,-17.9,55.1C-28.6,48.5,-35.1,36.3,-42.6,24.2C-50,12,-58.5,0.1,-62,-16.3C-65.5,-32.7,-64,-53.5,-52.8,-66.7C-41.6,-79.8,-20.8,-85.3,-6.1,-78C8.6,-70.8,17.3,-50.8,29.1,-37.8Z" transform="translate(90 86)" />
+                </clipPath>
+                </svg>
+            </div>
+            
+            <section class="introStylist">
+                <h2>Jina</h2>
+                <p class="position">Lead Hair Specialist</p>
+                <p>Meet our visionary founder, Jina, a trendsetting visionary in the world of hairstyling. With a keen eye for Korean beauty trends, Jina brought her passion for Korean beauty and style to life in her very own salon. With 25 years in the hair and beauty industry, Jina offers a unique and personalized experience for each client, tailored to enhance one's natural beauty.</p>
+            </section>
         </section>
+
+        <section id="meetStylist2">
+            <div class="imgs">
+                <img src="images/Stylist 1.jpg" alt="Rachel has curly brown hair, holding a denim jacket and wearing sunglasses, posing in front of a reflective window">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob2" clipPathUnits="objectBoundingBox" transform="scale(0.005999, 0.005031)">
+                    <path fill="#FF0066" d="M44.5,-59.5C53.2,-45.7,52.7,-27.5,57.2,-9C61.8,9.4,71.3,28.1,68,44.4C64.7,60.7,48.5,74.8,30.3,79.9C12.2,85,-8,81.2,-24.7,72.9C-41.5,64.7,-54.8,52,-60.1,37.3C-65.5,22.7,-62.9,6,-56.8,-6.8C-50.7,-19.6,-41.2,-28.6,-31.1,-42.2C-21.1,-55.8,-10.5,-74,3.7,-78.3C17.9,-82.7,35.8,-73.3,44.5,-59.5Z" transform="translate(80 80)" />
+                </clipPath>
+                </svg>
+            </div>
+            
+            <section class="introStylist">
+                <h2>Rachel</h2>
+                <p class="position">Color Specialist</p>
+                <p>Meet Rachel, our brilliant maestro of hues, who has embarked on a journey to redefine hair coloring. As a dedicated specialist, Alex combines artistic flair with technical mastery to craft personalized color palettes that reflect your unique style. At Jina Salon, we believe your hair should be as vibrant as you are, and Rachel's expertise transforms ordinary locks into extraordinary masterpieces. Book with Rachel to create your new look that leave a lasting impression.</p>
+            </section>    
+        </section>
+
+        <section id="meetStylist3">
+            <div class="imgs">
+                <img src="images/Stylist 3.jpg" alt="Alex has short, slicked back, brown hair, wearing a black shirt and has lilac lighting">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob3" clipPathUnits="objectBoundingBox" transform="scale(0.006100, 0.006231)">
+                    <path fill="#FF0066" d="M50.5,-64C61.4,-50.9,63.7,-31.3,67.8,-11.4C72,8.5,78.1,28.5,70.5,39.9C62.9,51.2,41.7,53.8,22.8,59.2C3.8,64.6,-12.8,72.9,-28.2,70.3C-43.5,67.8,-57.5,54.5,-58.8,39.9C-60.2,25.3,-48.9,9.3,-47.4,-10C-45.9,-29.3,-54.3,-51.9,-48,-65.8C-41.7,-79.7,-20.9,-84.9,-0.6,-84.2C19.7,-83.5,39.5,-77,50.5,-64Z" transform="translate(80 85)" />
+                </clipPath>
+                </svg>
+            </div>
+            
+            <section class="introStylist">
+                <h2>Alex</h2>
+                <p class="position">Perm Specialist</p>
+                <p>Meet Alex, our perm virtuoso and the driving force behind those gorgeous curls you've been dreaming of. With a passion for precision and an eye for individuality, Alex turns ordinary strands into cascading waves of beauty. At Jina Salon, we believe in creating personalized and timeless permed styles that embrace the natural rhythm of your hair. Whether you're looking for soft curls or bold waves, book with Alex and let your hair dance with joy in the hands of our perm expert!</p>
+            </section>
+        </section>
+
+        <section id="meetStylist4">
+            <div class="imgs">
+                <img src="images/Stylist 4.jpg" alt="Hannah has medium length blonde hair blowing in wind, and wearing an orange shirt with a denim jacket">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="blob4" clipPathUnits="objectBoundingBox" transform="scale(0.006100, 0.006231)">
+                    <path fill="#FF0066" d="M50.5,-56.4C62.3,-50.3,66.4,-31.4,71,-11.6C75.6,8.2,80.6,28.8,71.9,39.3C63.2,49.8,40.8,50.1,21,57.2C1.1,64.2,-16.1,77.9,-27.1,74C-38.1,70.2,-42.8,48.8,-46,32C-49.2,15.2,-50.8,3,-51.6,-11.9C-52.3,-26.9,-52.2,-44.5,-43.5,-51.1C-34.7,-57.7,-17.4,-53.2,1,-54.4C19.4,-55.6,38.7,-62.4,50.5,-56.4Z" transform="translate(70 60)" />
+                </clipPath>
+                </svg>
+            </div>
+        
+            <section class="introStylist">
+                <h2>Hannah</h2>
+                <p class="position">Cut and Style Specialist</p>
+                <p>Meet Hannah, our cutting-edge stylist. With an eye for the latest trends and a knack for personalized elegance, Sarah specializes in crafting haircuts that are as unique as you are. We believe in the power of a great haircut to elevate confidence and bring out your best features. Sarah is dedicated to creating styles that seamlessly blend modern flair with timeless sophistication that will make you leave feeling effortlessly chic. Book with Hannah to let your hair speak volumes.</p>
+            </section>
+        </section>
+
         <a id="backToTop" href="#main">back to top^</a>
     </main>
     <footer>
-        <!--Insert logo svg-->
-        <svg></svg>
-
-        <section>
+        <section id="footerLinks">
             <h2 class="hide">Links</h2>
             <!--svg for facebook-->
             <a href="https://www.facebook.com/people/Jina-Salon/61550702547102/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="#F4A4B9" />
+                    <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="white" />
                 </svg>
             </a>
             <!--svg for instagram-->
             <a href="https://www.instagram.com/hairby_jina/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="#F4A4B9" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="55" height="55" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0b9c6" fill="white" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                     <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
@@ -95,8 +195,8 @@
                 </svg>
             </a>
         </section>
-        <p><b>Disclaimer</b></p>
-        <p><small>This is for educational purposes only and is not the official site for Jina Salon</small></p>
+        <p>Disclaimer</p>
+        <p><small>This is for academic purposes only and is not the official site for Jina Salon</small></p>
         <p><small>Copyright&copy; 2023</small></p>
     </footer>
 </body>

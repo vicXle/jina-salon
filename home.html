@@ -18,6 +18,7 @@
     <!-- <link rel="canonical" href="/">
     <base href="jinasalon/home"> -->
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <style>
         .prefEng {
             background-color: var(--dark-pink);
@@ -62,35 +63,37 @@
         
         <h1 class="hide">Jina Salon</h1><!--hide-->
         <nav>
-            <ul id="menu">
-                <li>
-                    <a href="#about">about</a>
-                </li>
-                <li>
-                    <a href="services.html">services</a>
-                </li>
-                <li>
-                    <a href="stylists.html">stylists</a>
-                </li>
-                <li>
-                    <a href="#contact">contact</a>
-                </li>
-            </ul>
-
-            <ul id="langList">
-                <li><a href="home.html" class="prefEng">English</a></li>
-                <li><a href="homeKOR.html" class="prefKOR">한국어</a></li>
-            </ul>
-
-            <p>
-                call to book an appointment <a href="tel:+1(623)300-8798">623.300.8798</a>
-            </p>
+            <button id="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div id="nav">
+                <ul id="menu">
+                    <li>
+                        <a href="#about">about</a>
+                    </li>
+                    <li>
+                        <a href="services.html">services</a>
+                    </li>
+                    <li>
+                        <a href="stylists.html">stylists</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
+                    </li>
+                </ul>
+    
+                <ul id="langList">
+                    <li><a href="home.html" class="prefEng">English</a></li>
+                    <li><a href="homeKOR.html" class="prefKOR">한국어</a></li>
+                </ul>
+    
+                <p>
+                    call to book an appointment <a href="tel:+1(623)300-8798">623.300.8798</a>
+                </p>
+            </div>
         </nav>
-        <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="black" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-        </button>
     </header>
     <main id="main">
         <!--add salon intro images-->
